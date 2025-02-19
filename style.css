@@ -44,8 +44,14 @@ body{
     width: fit-content;
     aspect-ratio: 1/ 1.6;
     min-height: fit-content;
-    position: relative;
-    overflow: visible
+    overflow: visible;
+
+    display: flex;
+    flex-flow: column nowrap;
+    
+    gap: 0;
+
+
 }
 .ipod{
     width: 100%;
@@ -89,19 +95,17 @@ body{
     border-radius: 10px 10px 0 0;
 
     position: relative;
-    left: 6%;
+    left: 8%;
     z-index: 10;
 
     cursor: pointer;
 
     background: linear-gradient(145deg, #7b002d, #680026);
+    transition:  transform ease-out 200ms ;
 }
 
-.ipod-darkmode-switch{
-
-}
-.ipod-lightmode-switch{
-
+.ipod-switch--darkmode {
+    transform: translateX(30px);
 }
 
 .container-btns{
@@ -138,6 +142,7 @@ body{
 
     color: var(--rosy-brown);
     background: transparent;
+    transition-duration: 300ms;
 }
 
 .material-icons.icon {
@@ -146,8 +151,7 @@ body{
 }
 
 
-.btn:hover{
-    transition-duration: 300ms;
+.btn:hover, .btn--darkmode{
     color: white; /*cambiar el color del brillo*/
     text-shadow: 0 0 10px rgb(255, 193, 193);
 }
@@ -201,10 +205,25 @@ body{
 .btn-next, .btn-prev{
     width: 20%;
     background-color: transparent;
-    box-shadow:  none
+    box-shadow:  none;
 }
 .btn-menu, .btn-play, .btn-pause{
     width: 100%;
+}
+
+.main--darkmode{
+    background-color: var(--night);
+}
+
+.ipod--darkmode{
+    background-color: var(--claret);
+}
+
+.container-btns--darkmode{
+    background-color: var(--davys-gray);
+}
+.btn-select--darkmode{
+    background-color: var(--claret);
 }
 
 .footer{
