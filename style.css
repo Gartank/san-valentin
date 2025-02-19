@@ -92,15 +92,20 @@ body{
     width: 13%;
     aspect-ratio: 1/ 0.15;
     border-radius: 10px 10px 0 0;
-    
+
     position: relative;
     left: 6%;
     z-index: 10;
+
+    cursor: pointer;
 
     background: linear-gradient(145deg, #7b002d, #680026);
 }
 
 .ipod-darkmode-switch{
+
+}
+.ipod-lightmode-switch{
 
 }
 
@@ -143,7 +148,7 @@ body{
 
 .btn:hover{
     transition-duration: 300ms;
-    color: white;
+    color: white; /*cambiar el color del brillo*/
     text-shadow: 0 0 10px rgb(255, 193, 193);
 }
 
@@ -160,7 +165,12 @@ body{
     color: var(--night);
     background-color: var(--rosy-brown);
 
+    &:hover{
+        background-color: #fff;
+        box-shadow: 0 0 20px white; /*cambiar color del brillo*/
+    }
 }
+
 
 .outer_circle-btns{
     width: 100%;
@@ -198,7 +208,7 @@ body{
     background-color: transparent;
     box-shadow:  none
 }
-.btn-menu, .btn-play{
+.btn-menu, .btn-play, .btn-pause{
     width: 100%;
 }
 
