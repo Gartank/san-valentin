@@ -1,5 +1,5 @@
 import * as btnLib from "/components/buttons/btn-lib.js";
-import * as darkMode from "/components/dark-mode/dark.js";
+import * as theme from "/components/theme/theme.js";
 import * as ipodScreen from "/components/ipod-interface/ipod-ui.js";
 
 const ipodButtons = document.querySelectorAll(".btn , .switch");
@@ -7,9 +7,7 @@ const ipodSwitch = document.querySelector(".ipod-switch");
 const ipodScreenObj = document.querySelector(".ipod-screen");
 const mainElem = document.querySelector('.main');
 const ipod = document.querySelector('.ipod');
-const buttonsContainer = document.querySelector('.container-btn');
-
-console.log(ipodSwitch);
+const buttonsContainer = document.querySelector('.outer_circle-btns');
 
 ipodButtons.forEach(function(elem){
     elem.addEventListener('click', () => {
@@ -39,11 +37,12 @@ ipodSwitch.addEventListener( 'click', () => {
     let switchClass = ipodSwitch.className
     if( switchClass.includes("ipod-switch--darkmode") ){
         switchClass = "ipod-switch";
+        theme.turnLight(mainElem, ipod, buttonsContainer, ipodButtons);
     }
     else{
         switchClass += " ipod-switch--darkmode";
+        theme.turnDark(mainElem, ipod, buttonsContainer, ipodButtons);
     }
     ipodSwitch.setAttribute('class', switchClass);
 
-    darkMode.turnDark(mainElem, buttonsContainer, buttonsContainer)
 });

@@ -84,9 +84,10 @@ body{
 
     border-radius: 5px;
 
+box-shadow: inset 16px 16px 120px #111111,
+            inset -16px -16px 20px #3a3a3a;
     background: #242323;
-    box-shadow: inset 16px 16px 20px #222121,
-            inset -16px -16px 20px #5f5f5fc5;
+
 }
 
 .ipod-switch{
@@ -104,42 +105,36 @@ body{
     transition:  transform ease-out 200ms ;
 }
 
-.ipod-switch--darkmode {
-    transform: translateX(30px);
-}
 
 .container-btns{
     width: 85%; 
     aspect-ratio: 1/1;
-    margin-bottom: 7%;
     border-radius: 50%;
-    background: linear-gradient(145deg, #7b002d, #680026);
-
+    overflow: visible;
+    margin-bottom: 7%;
+    
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-
+    
     position: relative;
-
-    box-shadow:  6px 6px 9px #997373,
-                -6px -6px 9px #ddabab;
 }
 
 .btn{
     width: 40%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-
+    
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
-
+    
     color: var(--rosy-brown);
     background: transparent;
     transition-duration: 300ms;
@@ -152,8 +147,8 @@ body{
 
 
 .btn:hover, .btn--darkmode{
-    color: white; /*cambiar el color del brillo*/
-    text-shadow: 0 0 10px rgb(255, 193, 193);
+    color: rgb(255, 203, 203); /*cambiar el color del brillo*/
+    text-shadow: 0 0 10px rgb(255, 203, 203);
 }
 
 .btn-select{
@@ -161,17 +156,17 @@ body{
     
     left: 27%;
     top: 29%;
-
+    
     z-index: 20;
-
+    
     align-self: center;
-
+    
     color: var(--night);
     background-color: var(--rosy-brown);
-
+    
     &:hover{
-        background-color: #fff;
-        box-shadow: 0 0 15px white; /*cambiar color del brillo*/
+        background-color: rgb(255, 203, 203);
+        box-shadow: 0 0 15px rgb(255, 203, 203); /*cambiar color del brillo*/
     }
 }
 
@@ -179,23 +174,27 @@ body{
 .outer_circle-btns{
     width: 100%;
     aspect-ratio: 1/1;
-    position: absolute;
-    left: 0;
-    bottom:0;
-    z-index: 10;
-
+    border-radius: 50%;
+    
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
-
-    background: linear-gradient(145deg,#8c0033, #5a0021);
+    
+    position: absolute;
+    left: 0;
+    bottom:0;
+    z-index: 10;
+    
+    background: linear-gradient(145deg,#8c0033, #810130);
+    box-shadow: 10px 10px 9px #997373,
+                -10px -10px 9px #daa9a9;;
 }
 
 .vertical-btns-container{
     min-width: 20%;
     height: 100%;
-
+    
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -212,18 +211,34 @@ body{
 }
 
 .main--darkmode{
-    background-color: var(--night);
+    background: linear-gradient(145deg, #272525, #202020);
 }
 
 .ipod--darkmode{
-    background-color: var(--claret);
+    background: linear-gradient(145deg, #4f4f4f, #434343);
+    
+    box-shadow:  inset -3px -3px 9px #181818,
+    inset 3px 3px 9px #777777,
+    26px 26px 29px #1f1e1e,
+    -26px -26px 29px #202020;
 }
 
-.container-btns--darkmode{
-    background-color: var(--davys-gray);
+.ipod-switch--darkmode {
+    transform: translateX(30px);
+    background: var(--rosy-brown);
+}
+.ipod-screen--darkmode{
+    box-shadow: inset 16px 16px 120px #111111,
+            inset -16px -16px 20px #1a1a1a;
+    background: #242323;
+}
+.outer_circle-btns--darkmode{
+    background: var(--eerie-black);
+    box-shadow: 5px 5px 10px #303030,  
+                -5px -5px 20px #777777;
 }
 .btn-select--darkmode{
-    background-color: var(--claret);
+    background: var(--claret);
 }
 
 .footer{
