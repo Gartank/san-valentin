@@ -241,6 +241,8 @@ box-shadow: inset 16px 16px 120px #111111,
     background: var(--claret);
 }
 
+/* TODO perform a circle-fill animation to theme change*/
+
 .footer{
     width: 100%;
     height: 20%;

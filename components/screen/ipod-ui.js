@@ -5,9 +5,9 @@ for(let index in menuDir){
     let dir = window.location.origin + "/components/screen" + menuDir[index];
     
     try{
-        const response = fetch(dir);
+        const response = fetch(dir); // TODO? why this request doesn't work when the direction URL is practically correct?
         if(!response.ok){
-            throw new Error("Error en la solicitud")
+            throw new Error("Error en la solicitud") 
         }
         const menuHTML = response.text().querySelector(".menu");
         const menuName = menuHTML.classList[1];
