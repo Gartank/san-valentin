@@ -2,10 +2,10 @@ const menuDir = ["/menu-albums.html", "/menu-artists.html", "/menu-main.html", "
 export const menuMap = new Map();
 
 for(let index in menuDir){
-    let dir = menuDir[index];
+    let dir = window.location.origin + "/components/screen" + menuDir[index];
     
     try{
-        const response = fetch(`${window.location.origin}/component/screen${dir}`);
+        const response = fetch(dir);
         if(!response.ok){
             throw new Error("Error en la solicitud")
         }

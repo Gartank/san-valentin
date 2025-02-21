@@ -4,11 +4,10 @@ import * as ipodScreen from "/components/screen/ipod-ui.js";
 
 const ipodButtons = document.querySelectorAll(".btn , .switch");
 const ipodSwitch = document.querySelector(".ipod-switch");
-const ipodScreenElem = document.querySelector(".ipodScreen");
+const ipodScreenElem = document.querySelector(".ipod-screen");
 const ipod = document.querySelector('.ipod');
+const mainElem = document.querySelector('.main');
 const buttonsContainer = document.querySelector('.outer_circle-btns');
-
-console.log(ipodScreen.menuMap)
 
 ipodButtons.forEach(function(elem){
     elem.addEventListener('click', () => {
