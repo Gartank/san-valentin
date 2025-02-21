@@ -1,10 +1,10 @@
 import * as btnLib from "/components/buttons/btn-lib.js";
 import * as theme from "/components/theme/theme.js";
-import * as ipodScreen from "/components/ipod-interface/ipod-ui.js";
+import * as ipodScreen from "/components/screen/ipod-ui.js";
 
 const ipodButtons = document.querySelectorAll(".btn , .switch");
 const ipodSwitch = document.querySelector(".ipod-switch");
-const ipodScreenObj = document.querySelector(".ipod-screen");
+const ipodScreenObj = document.querySelector("./components/screen/ipod-ui.js");
 const mainElem = document.querySelector('.main');
 const ipod = document.querySelector('.ipod');
 const buttonsContainer = document.querySelector('.outer_circle-btns');
