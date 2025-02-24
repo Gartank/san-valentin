@@ -1,20 +1,25 @@
 
-export function turnDark( background, ipod, buttonContainer, ...buttons ){
+export function turnDark( elemArray ){
     const darkClass = '--darkmode';
     
-    for (let index = 0; index < arguments.length; index++) {
-        const element = arguments[index];   
-        element.className = `${element.className} ${element.className+darkClass}`;
+    for ( let elem of elemArray ) {
+        const elemClassList = elem.className.split(" ");
+        const lastClassName = ( elemClassList.length > 1 ) ? elemClassList[1] : elemClassList[0];
+
+        console.log(elemClassList);
+
+        elem.className += ` ${lastClassName+darkClass}`;
+        console.log(elem);
     }
 }
 
-export function turnLight( background, ipod, buttonContainer, ...buttons){
-    for (let index = 0; index < arguments.length; index++) {
-        const element = arguments[index];
-        const elemClassList = element.className.split(" ");
+export function turnLight( elemArray ){
+    for (let elem of elemArray) {
+        const elemClassList = elem.className.split(" ");
         elemClassList.pop();
-
-        element.className  = elemClassList.join(" ");
+        
+        elem.className  = elemClassList.join(" ");
+        console.log(elem);
     }
 }
 

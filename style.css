@@ -50,9 +50,8 @@ body{
     flex-flow: column nowrap;
     
     gap: 0;
-
-
 }
+
 .ipod{
     width: 100%;
     height: 100%; 
@@ -73,6 +72,7 @@ body{
                 inset 3px 3px 9px #ddabab,
                 26px 26px 29px #997373,
                 -26px -26px 29px #bb9191;
+    transition: 500ms;
 }
 
 .ipod-screen{
@@ -101,8 +101,8 @@ box-shadow: inset 16px 16px 120px #111111,
 
     cursor: pointer;
 
-    background: linear-gradient(145deg, #7b002d, #680026);
-    transition:  transform ease-out 200ms ;
+    background: linear-gradient(145deg, #7b002d, #72002a);
+    transition: transform ease-out 200ms ;
 }
 
 
@@ -119,6 +119,7 @@ box-shadow: inset 16px 16px 120px #111111,
     align-items: center;
     
     position: relative;
+    transition: 500ms;
 }
 
 .btn{
@@ -163,6 +164,8 @@ box-shadow: inset 16px 16px 120px #111111,
     
     color: var(--night);
     background-color: var(--rosy-brown);
+    transition: 500ms;
+
     
     &:hover{
         background-color: rgb(255, 203, 203);
@@ -221,27 +224,23 @@ box-shadow: inset 16px 16px 120px #111111,
     inset 3px 3px 9px #777777,
     26px 26px 29px #1f1e1e,
     -26px -26px 29px #202020;
+
+    animation-name: dark-mode-ipod;
 }
 
 .ipod-switch--darkmode {
     transform: translateX(30px);
     background: var(--rosy-brown);
 }
-.ipod-screen--darkmode{
-    box-shadow: inset 16px 16px 120px #111111,
-            inset -16px -16px 20px #1a1a1a;
-    background: #242323;
-}
+
 .outer_circle-btns--darkmode{
     background: var(--eerie-black);
     box-shadow: 5px 5px 10px #303030,  
                 -5px -5px 20px #777777;
 }
 .btn-select--darkmode{
-    background: var(--claret);
+    background: var(--rosy-brown);
 }
-
-/* TODO perform a circle-fill animation to theme change*/
 
 .footer{
     width: 100%;
@@ -257,4 +256,16 @@ box-shadow: inset 16px 16px 120px #111111,
         border-radius: 18px;
         padding: 20px;
     }
-} 
+}
+
+/* TODO perform a animation to theme change*/
+@keyframes dark-mode-ipod {
+    0% {
+        transition-property: box-shadow;
+        transition-duration: 1000ms;
+    }
+    50%{
+        transition-property: background;
+        transition-duration: 500ms;
+    }
+}

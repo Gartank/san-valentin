@@ -32,17 +32,24 @@ ipodButtons.forEach(function(elem){
     })
 });
 
+const themedElements = [
+    ipod, mainElem, buttonsContainer
+    , ipodSwitch
+    , ...ipodButtons
+]
+
+console.log(themedElements);
+
 ipodSwitch.addEventListener( 'click', () => {
 
     let switchClass = ipodSwitch.className
     if( switchClass.includes("ipod-switch--darkmode") ){
         switchClass = "ipod-switch";
-        theme.turnLight(mainElem, ipod, buttonsContainer, ipodButtons);
+        theme.turnLight(themedElements);
     }
     else{
         switchClass += " ipod-switch--darkmode";
-        theme.turnDark(mainElem, ipod, buttonsContainer, ipodButtons);
+        theme.turnDark(themedElements);
     }
     ipodSwitch.setAttribute('class', switchClass);
-
 });
